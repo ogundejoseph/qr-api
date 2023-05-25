@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #3498db;
+}
+.wrapper{
+    height: 290px;
+    width: 420px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 16px 25px;
+    transition: height 0.2s ease;
+}
+.wrapper.active{
+    height: 545px;
+}
+header h1{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper form{
+    height: 180px;
+    background: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    transition: height 0.2s ease;
+}
+.wrapper.active form{
+    height: 225px;
+    pointer-events: none;
+}
+form img{
+    display: none;
+    max-width: 150px;    
+}
+.wrapper.active form img{
+    display: block;
+}
+.wrapper.active form .content{
+    display: none;
+}
+form .content i{
+    color: #3498db;
+    font-size: 50px;
+}
+form .content p{
+    color: #3498db;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.wrapper .details{
+    margin-top: 20px;
+    opacity: 0;
+    pointer-events: none;
+}
+.wrapper.active .details{
+    margin-top: 20px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+.details textarea{
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 130px;
+    min-height: 130px;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+.details .buttons{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.buttons button{
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: #3498db;
+    cursor: pointer;
+    border-radius: 5px;
+    width: calc(100% / 2 - 10px);
+}
+.wrapper #link1{
+    padding-top: 10px;
+    font-size: 16px;
+    color: #333;
+    display: block;
+}
+.wrapper #link2{
+    padding-top: 10px;
+    font-size: 16px;
+    color: #333;
+    display: none;
+}
+.wrapper.active #link1{
+    display: none;
+}
+.wrapper.active #link2{
+    display: block;
+}
