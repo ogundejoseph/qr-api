@@ -11,7 +11,8 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    background: #7b7b7c;
+    background-image: linear-gradient(rgba(0,0,0,0.75),
+                                      rgba(0,0,0,0.75)),url(background.jpg);
 }
 .header{
     width: 100%;
@@ -19,7 +20,7 @@
     top: 48%;
     transform: translateY(-50%);
     text-align: center;
-    color: #000;
+    color: #fff;
 }
 .header h1{
     font-size: 30px;
@@ -38,4 +39,9 @@
     padding: 8px 20px;
     background: #333;
     cursor: pointer;
+}
+@media(max-width: 700px){
+    .header h1{
+        font-size: 20px;
+    }
 }
